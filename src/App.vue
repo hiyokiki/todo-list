@@ -3,8 +3,8 @@
   import todoItem from './components/todoItem.vue';
   const todoText = ref('');
   const todos = reactive([
-    {id:1,title:'Learn Web', checked:false},
-    {id:2,title:'Get a job', checked:false}
+    {id:1,title:'음형진 롤체', checked:false},
+    {id:2,title:'들어와라 1시20분 ㄱㄱ', checked:false}
   ])
   function toggleCheckbox({id, checked}){
     const idx = todos.findIndex(todo => todo.id === id);
@@ -28,7 +28,7 @@
       title: todoText.value,
       checked: false
     })
-
+    todoText.value = '';
   }
 
 </script>
