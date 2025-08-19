@@ -3,8 +3,10 @@
   import todoItem from './components/todoItem.vue';
   const todoText = ref('');
   const todos = reactive([
-    {id:1,title:'음형진 롤체', checked:false},
-    {id:2,title:'들어와라 1시20분 ㄱㄱ', checked:false}
+    {id:1,title:'음형진이랑 함께 롤체하기', checked:false},
+    {id:2,title:'한건규와 롤체', checked:false},
+    {id:3,title:'들어와라 1시20분 ㄱㄱ', checked:false},
+    {id:4,title:'들어와라 1시20분 ㄱㄱ', checked:false}
   ])
   function toggleCheckbox({id, checked}){
     const idx = todos.findIndex(todo => todo.id === id);
@@ -36,7 +38,7 @@
 <template>
   <div class="container">
 
-    <h1>Todo List</h1>
+    <h1>오늘의 할 일</h1>
     <BFormInput
     v-model="todoText"
     placeholder="할일을 입력하세요"
